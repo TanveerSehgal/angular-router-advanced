@@ -1,7 +1,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-    template: `<div>Atta boy! Get in that rocket ship</div>`
+    templateUrl: './nasa.component.html',
+    styleUrls: ['./nasa.component.css']
 })
 
 export class NasaComponent {}
