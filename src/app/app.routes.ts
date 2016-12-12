@@ -6,7 +6,7 @@ import {GymComponent} from "./core-life/gym.component";
 import {RestaurantComponent} from "./core-life/restaurant.component";
 
 const routes = [
-    {path: '', component: HomeComponent},
+    {path: '', pathMatch: 'full', redirectTo: 'home'},
     {path: 'home', component: HomeComponent},
     {path: 'work', component: WorkComponent},
     {path: 'gym', component: GymComponent},
