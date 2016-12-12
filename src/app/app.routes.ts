@@ -12,7 +12,7 @@ const routes = [
     {path: 'gym', component: GymComponent},
     {path: 'restaurant', component: RestaurantComponent},
     {path: 'advanced', loadChildren: 'advanced-life/advanced-life.module'},
-    {path: '**', component: HomeComponent}
+    {path: '**', redirectTo: 'home'}
 ];
 
 export default RouterModule.forRoot(routes);
