@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 
 @Component({
     templateUrl: './nasa.component.html',
@@ -7,7 +7,10 @@ import {Router} from "@angular/router";
 })
 
 export class NasaComponent {
-    router: Router;
+    private router: Router;
+    private route: ActivatedRoute;
+    private sub: any;
+    private id: number;
 
     spaceships = [{
         id: 1,
@@ -26,8 +29,19 @@ export class NasaComponent {
         name: 'Space Swag'
     }];
 
-    constructor(_router: Router) {
+    constructor(_router: Router, _route: ActivatedRoute) {
         this.router = _router;
+        this.route = _route;
+    }
+
+    ngOnInit() {
+        this.sub = this.route.params.subscribe(params => {
+            this.id = +params['id'];
+        });
+    }
+
+    ngOnDestory() {
+        this.sub.unsubscribe();
     }
 
     selectSpaceship(id) {
