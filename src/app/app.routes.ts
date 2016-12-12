@@ -10,7 +10,9 @@ const routes = [
     {path: 'home', component: HomeComponent},
     {path: 'work', component: WorkComponent},
     {path: 'gym', component: GymComponent},
-    {path: 'restaurant', component: RestaurantComponent}
+    {path: 'restaurant', component: RestaurantComponent},
+    {path: 'advanced', loadChildren: 'advanced-life/advanced-life.module'},
+    {path: '**', component: HomeComponent}
 ];
 
 export default RouterModule.forRoot(routes);

@@ -5,6 +5,7 @@
     <a class="btn" routerLink="work" routerLinkActive="btn-primary">Work</a>
     <a class="btn" routerLink="gym" routerLinkActive="btn-primary">Gym</a>
     <a class="btn" routerLink="restaurant" routerLinkActive="btn-primary">Restaurant</a>
+    <a [routerLink]="['home', 'time', 12, {item: 'banana'}]">Home at 12</a>
 </nav>
 
 <router-outlet></router-outlet>

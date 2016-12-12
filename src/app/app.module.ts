@@ -5,6 +5,7 @@ import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {CoreLifeModule} from './core-life/core-life.module';
+import {AdvancedLifeModule} from './advanced-life/advanced-life.module';
 import appRoutes from './app.routes';
 
 @NgModule({
@@ -16,6 +17,7 @@ import appRoutes from './app.routes';
         FormsModule,
         HttpModule,
         CoreLifeModule,
+        AdvancedLifeModule,
         appRoutes
     ],
     providers: [],
