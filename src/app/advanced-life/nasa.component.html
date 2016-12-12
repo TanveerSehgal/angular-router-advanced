@@ -2,10 +2,6 @@
     <div>Select Your Rocket Ship</div>
 
     <ul class="list-group">
-        <li class="list-group-item">Moon Blaster</li>
-        <li class="list-group-item">Back to Mars</li>
-        <li class="list-group-item">Little John's Dream</li>
-        <li class="list-group-item">3,2,1 I'm Out</li>
-        <li class="list-group-item">Space Swag</li>
+        <li class="list-group-item" *ngFor="let spaceship of spaceships">{{spaceship.name}}</li>
     </ul>
 </div>

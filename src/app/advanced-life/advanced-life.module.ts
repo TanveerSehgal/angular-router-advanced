@@ -1,25 +1,24 @@
 import {NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
 
 import advancedRoutes from './advanced-life.routes';
-import {AdvancedLifeComponent} from './advanced-life.component';
 import {NasaComponent} from './nasa.component';
 import {SpaceXComponent} from './space-x.component';
 import {WelcomeComponent} from './welcome.component';
 
 @NgModule({
     imports: [
+        CommonModule,
         advancedRoutes
     ],
     declarations: [
         NasaComponent,
         SpaceXComponent,
-        AdvancedLifeComponent,
         WelcomeComponent
     ],
     exports: [
         NasaComponent,
-        SpaceXComponent,
-        AdvancedLifeComponent
+        SpaceXComponent
     ]
 })
 
