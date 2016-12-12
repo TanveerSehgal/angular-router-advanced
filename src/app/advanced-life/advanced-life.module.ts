@@ -5,6 +5,7 @@ import advancedRoutes from './advanced-life.routes';
 import {NasaComponent} from './nasa.component';
 import {SpaceXComponent} from './space-x.component';
 import {WelcomeComponent} from './welcome.component';
+import {NotificationComponent} from './notification.component';
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import {WelcomeComponent} from './welcome.component';
     declarations: [
         NasaComponent,
         SpaceXComponent,
-        WelcomeComponent
+        WelcomeComponent,
+        NotificationComponent
     ],
     exports: [
         NasaComponent,

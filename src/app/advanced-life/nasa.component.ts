@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {Router} from "@angular/router";
 
 @Component({
     templateUrl: './nasa.component.html',
@@ -6,6 +7,8 @@ import {Component} from "@angular/core";
 })
 
 export class NasaComponent {
+    router: Router;
+
     spaceships = [{
         id: 1,
         name: 'Moon Blaster'
@@ -22,4 +25,12 @@ export class NasaComponent {
         id: 5,
         name: 'Space Swag'
     }];
+
+    constructor(_router: Router) {
+        this.router = _router;
+    }
+
+    selectSpaceship(id) {
+        this.router.navigate(['advanced/nasa', id]);
+    }
 }

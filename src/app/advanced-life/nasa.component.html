@@ -2,6 +2,6 @@
     <div>Select Your Rocket Ship</div>
 
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let spaceship of spaceships">{{spaceship.name}}</li>
+        <li class="list-group-item" *ngFor="let spaceship of spaceships" (click)="selectSpaceship(spaceship.id)">{{spaceship.name}}</li>
     </ul>
 </div>
