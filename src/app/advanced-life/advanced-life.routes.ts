@@ -18,6 +18,7 @@ const routes = [{
             ]
         },
         {path: 'space-x', component: SpaceXComponent},
+        {path: '**', redirectTo: '/advanced'}
     ]
 }];
 
